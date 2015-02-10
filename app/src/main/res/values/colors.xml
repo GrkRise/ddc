@@ -1,0 +1,13 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="main">#607d8b</color>
+    <color name="main_text">#eceff1</color>
+    <color name="background">#eceff1</color>
+    <color name="back_text">#607d8b</color>
+    <color name="press_item">#cfd8dc</color>
+    <color name="help_text">#78909c</color>
+
+
+
+</resources>
