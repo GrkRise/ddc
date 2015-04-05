@@ -24,6 +24,11 @@
             android:label="@string/home"
             android:theme="@style/actionBar">
         </activity>
+        <provider
+            android:authorities="com.example.grk_rise.ddc"
+            android:name=".activitys.FileContentProvider"
+            android:enabled="true"
+            android:exported="true"/>
 
     </application>
 

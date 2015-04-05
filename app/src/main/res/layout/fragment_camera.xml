@@ -25,16 +25,5 @@ android:background="@color/background">
         android:id="@+id/camshot"
         />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:id="@+id/button"
-        android:background="@color/background"
-        android:src="@drawable/ic_camera"/>
-
-
 
 </RelativeLayout>

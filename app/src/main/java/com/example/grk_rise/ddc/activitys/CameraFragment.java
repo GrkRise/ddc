@@ -4,26 +4,23 @@ package com.example.grk_rise.ddc.activitys;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.grk_rise.ddc.R;
 
 import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 
 /**
@@ -35,19 +32,8 @@ public class CameraFragment extends HomeActivity.PlaceholderFragment implements 
     private ImageView imageView;
 
     String mCurrentPhotoPath;
+    FloatingActionButton fabButton;
 
-    protected File createImageFile() throws IOException{
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "DDC_" + timeStamp + "_";
-        File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
-        File image = File.createTempFile(imageFileName, ".jpg", storageDir);
-
-        mCurrentPhotoPath = "file:" + image.getAbsolutePath();
-
-        return  image;
-
-
-    }
 
     public CameraFragment() {
         // Required empty public constructor
@@ -85,11 +71,19 @@ public class CameraFragment extends HomeActivity.PlaceholderFragment implements 
         View rootView = inflater.inflate(R.layout.fragment_camera,
                 container, false);
 
-        ImageButton imageButton = (ImageButton) rootView.findViewById(R.id.button);
+
         imageView = (ImageView) rootView.findViewById(R.id.camshot);
 
+        fabButton = new FloatingActionButton.Builder(this.getActivity())
+                .withDrawble(getResources().getDrawable(R.drawable.ic_camera))
+                .withButtonColor(getResources().getColor(R.color.main))
+                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
+                .withMargins(0, 0, 16, 16)
+                .create();
 
-        imageButton.setOnClickListener(this);
+
+
+        fabButton.setOnClickListener(this);
 
 
 
@@ -98,28 +92,12 @@ public class CameraFragment extends HomeActivity.PlaceholderFragment implements 
 
     protected void dispatchTakePictureIntent(){
 
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-//        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-//        String imageFileName = "DDC_" + timeStamp + "_";
-//        File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-//        File image = null;
-//        try {
-//            image = File.createTempFile(imageFileName, ".jpg", storageDir);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        mCurrentPhotoPath = "file:" + image.getAbsolutePath();
-//
-//
-//        //if(photoFile != null)
-//            {
-//            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile((image)));
-            startActivityForResult(takePictureIntent, PHOTO_INTENT_REQUES_CODE);
-            //}
-
-
+        PackageManager pm = getActivity().getPackageManager();
+        if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
+            Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            i.putExtra(MediaStore.EXTRA_OUTPUT, FileContentProvider.CONTENT_URI);
+            startActivityForResult(i, PHOTO_INTENT_REQUES_CODE);
+        }
     }
 
 
@@ -127,15 +105,16 @@ public class CameraFragment extends HomeActivity.PlaceholderFragment implements 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == PHOTO_INTENT_REQUES_CODE && resultCode == Activity.RESULT_OK){
 
-            //SetFullImage();
-            Bundle bundle = data.getExtras();
-            Bitmap bitmap = (Bitmap) bundle.get("data");
-            imageView.setImageBitmap(bitmap);
-            imageView.setMinimumHeight(1000);
-            imageView.setMinimumWidth(1500);
-
+            File out = new File(getActivity().getFilesDir(), "Image.jpg");
+            if(!out.exists()){
+                Toast.makeText(getActivity().getBaseContext(), "Error", Toast.LENGTH_LONG).show();
+                return;
+            }
+            Bitmap mBitmap = BitmapFactory.decodeFile(out.getAbsolutePath());
+            imageView.setImageBitmap(mBitmap);
 
         }
     }
@@ -145,32 +124,9 @@ public class CameraFragment extends HomeActivity.PlaceholderFragment implements 
         dispatchTakePictureIntent();
     }
 
-
-
-    private void SetFullImage(){
-        int targetW = imageView.getWidth();
-        int targetH = imageView.getHeight();
-
-
-
-        BitmapFactory.Options bmpOptions = new BitmapFactory.Options();
-        bmpOptions.inJustDecodeBounds = true;
-        Log.e("", "Test");
-        BitmapFactory.decodeFile(mCurrentPhotoPath, bmpOptions);
-        //BitmapFactory.decodeByteArray(data, 0, data.length, bmpOptions);
-        int photoW = bmpOptions.outWidth;
-        int photoH = bmpOptions.outHeight;
-
-        int scaleFactor = Math.min(photoW/targetW, photoH/targetH);
-
-        bmpOptions.inJustDecodeBounds = false;
-        bmpOptions.inSampleSize = scaleFactor;
-        bmpOptions.inPurgeable = true;
-
-        Bitmap bmp = BitmapFactory.decodeFile(mCurrentPhotoPath, bmpOptions);
-        //Bitmap bmp = BitmapFactory.decodeByteArray(data, 0, data.length, bmpOptions);
-        imageView.setImageBitmap(bmp);
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        fabButton.hideFAB();
     }
-
 }
