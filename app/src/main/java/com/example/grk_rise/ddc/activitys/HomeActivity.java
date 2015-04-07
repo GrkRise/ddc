@@ -52,17 +52,12 @@ public class HomeActivity extends ActionBarActivity
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
 
-        switch (position){
-            case 0:
-        }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction();
                        fragmentManager.beginTransaction()
                         .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                                 .commit();
-
-
 
     }
 
@@ -78,7 +73,13 @@ public class HomeActivity extends ActionBarActivity
                 mTitle = getString(R.string.ls);
                 break;
             case 4:
+                mTitle = getString(R.string.settings);
+                break;
+            case 5:
                 mTitle = getString(R.string.help);
+                break;
+            case 6:
+                mTitle = getString(R.string.about_support);
                 break;
         }
     }
@@ -161,18 +162,18 @@ public class HomeActivity extends ActionBarActivity
                 break;
 
                 case 4: {
-                    fragment = new HelpFragment();
+                    fragment = new SettingsFragment();
                     args.putInt(ARG_SECTION_NUMBER, sectionNumber);
                 }
                 break;
 
                 case 5: {
-                    fragment = new AboutFragment();
+                    fragment = new HelpFragment();
                     args.putInt(ARG_SECTION_NUMBER, sectionNumber);
                 }
                 break;
                 case 6: {
-                    fragment = new CopyrightFragment();
+                    fragment = new AboutFragment();
                     args.putInt(ARG_SECTION_NUMBER, sectionNumber);
                 }
                 break;

@@ -89,7 +89,7 @@ public class FloatingActionButton extends View {
             AnimatorSet animatorSet = new AnimatorSet();
             animatorSet.playTogether(scaleX, scaleY);
             animatorSet.setInterpolator(new AccelerateInterpolator());
-            animatorSet.setDuration(100);
+            animatorSet.setDuration(200);
             animatorSet.start();
             mHidden = true;
         }
@@ -116,6 +116,7 @@ public class FloatingActionButton extends View {
         private FrameLayout.LayoutParams params;
         private final Activity activity;
         int gravity = Gravity.BOTTOM | Gravity.RIGHT;
+        boolean visible = true;
         Drawable drawable;
         int color = Color.WHITE;
         int size = 0;

@@ -74,13 +74,14 @@ public class CameraFragment extends HomeActivity.PlaceholderFragment implements 
 
         imageView = (ImageView) rootView.findViewById(R.id.camshot);
 
+
+
         fabButton = new FloatingActionButton.Builder(this.getActivity())
-                .withDrawble(getResources().getDrawable(R.drawable.ic_camera))
+                .withDrawble(getResources().getDrawable(R.drawable.ic_camera_shot))
                 .withButtonColor(getResources().getColor(R.color.main))
                 .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
                 .withMargins(0, 0, 16, 16)
                 .create();
-
 
 
         fabButton.setOnClickListener(this);
@@ -128,5 +129,6 @@ public class CameraFragment extends HomeActivity.PlaceholderFragment implements 
     public void onDestroy() {
         super.onDestroy();
         fabButton.hideFAB();
+        fabButton.setEnabled(false);
     }
 }
