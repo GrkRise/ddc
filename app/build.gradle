@@ -5,11 +5,11 @@ android {
     buildToolsVersion "21.1.2"
 
         defaultConfig {
-            applicationId "com.example.grk_rise.ddc"
+            applicationId "com.example.grk_rise.rainbow"
             minSdkVersion 19
             targetSdkVersion 21
             versionCode 1
-            versionName "0.0." + "34a2052326f428e2bf268f26ce5b6a3a54f92531"
+            versionName "0.0." + "a5970bf927f541cdd70c626ec8e7f58f32d32eda"
         }
         buildTypes {
             release {

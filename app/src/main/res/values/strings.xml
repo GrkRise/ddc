@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="splash">Splash</string>
-    <string name="name" translatable="false">#rainbow generator</string>
+    <string name="splash" translatable="false">Splash</string>
+    <string name="app_name">#rainbow generator</string>
+    <string name="name">#rainbow menu</string>
 
     <string name="power" translatable="false">Powered by Razzhivaykin Igor</string>
     <string name="vers" translatable="false">vers. </string>
@@ -53,7 +54,7 @@
     <string name="help_ls">Locale Storage Help</string>
     <string name="help_ls_1"></string>
     <string name="help_ls_2"></string>
-    <string name="app_name">#rainbow menu</string>
+
 
 
 </resources>

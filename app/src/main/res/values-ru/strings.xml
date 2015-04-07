@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">#rainbow generator</string>
+    <string name="about_support">О приложении и поддержка</string>
+    <string name="camera">Камера</string>
+    <string name="help">Помощь</string>
+    <string name="home">Домашний экран</string>
+    <string name="ls">Локальное хранилище</string>
+    <string name="result">Результат</string>
+    <string name="settings">Настройки</string>
+    <string name="name">#rainbow меню</string>
+</resources>

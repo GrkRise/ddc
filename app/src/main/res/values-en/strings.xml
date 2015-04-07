@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">#rainbow generator</string>
+    <string name="about_support">About &amp; Support</string>
+    <string name="camera">Camera</string>
+    <string name="help">Help</string>
+    <string name="home">Home</string>
+    <string name="ls">Locale Storage</string>
+    <string name="name">#rainbow menu</string>
+    <string name="result">Result</string>
+    <string name="settings">Settings</string>
+</resources>
