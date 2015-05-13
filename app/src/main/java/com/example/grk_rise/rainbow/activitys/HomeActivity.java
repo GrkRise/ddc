@@ -100,6 +100,7 @@ public class HomeActivity extends ActionBarActivity
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
 
+
             getMenuInflater().inflate(R.menu.home, menu);
 
             restoreActionBar();

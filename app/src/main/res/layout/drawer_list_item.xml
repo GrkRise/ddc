@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="48dp"
-    android:background="@drawable/list_selector">
+    android:background="@drawable/list_selector"
+    android:clickable="false">
 
     <ImageView
         android:id="@+id/icon"
@@ -12,7 +13,8 @@
         android:layout_marginRight="12dp"
         android:contentDescription="@string/desc_list_item_icon"
         android:src="@drawable/ic_hamburger"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:tint="@color/main"/>
 
     <TextView
         android:id="@+id/title"

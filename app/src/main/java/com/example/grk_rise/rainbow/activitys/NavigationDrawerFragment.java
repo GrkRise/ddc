@@ -111,13 +111,13 @@ public class NavigationDrawerFragment extends Fragment {
 
         ArrayList<NavDrawerItem> navDrawerItems = new ArrayList<NavDrawerItem>();
 
+
         navDrawerItems.add(new NavDrawerItem(navMenuTitle[0], navMenuIcon.getResourceId(0, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitle[1], navMenuIcon.getResourceId(1, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitle[2], navMenuIcon.getResourceId(2, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitle[3], navMenuIcon.getResourceId(3, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitle[4], navMenuIcon.getResourceId(4, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitle[5], navMenuIcon.getResourceId(5, -1)));
-
 
         mDrawerListView.setAdapter(new NavDrawerListAdapter(
                 getActionBar().getThemedContext(),

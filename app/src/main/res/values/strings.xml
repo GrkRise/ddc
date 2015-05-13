@@ -14,7 +14,7 @@
     <string name="settings">Settings</string>
     <string name="help">Help</string>
     <string name="about_support">About &amp; Support</string>
-    <string name="copyright">Copyright</string>
+    <string name="copyright" translatable="false">Copyright</string>
 
     <string name="result">Result</string>
 
@@ -36,24 +36,24 @@
         <item>@drawable/ic_about</item>
     </array>
 
-    <string name="desc_list_item_icon">Item icon</string>
+    <string name="desc_list_item_icon" translatable="false">Item icon</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_example" translatable="false">Example action</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
-    <string name="help_ui">UI Help</string>
-    <string name="help_ui_1">1. Swipe from left to right or press button.</string>
-    <string name="help_ui_2">2. Select item in main navigation panel.</string>
+    <string name="help_ui" translatable="false">UI Help</string>
+    <string name="help_ui_1" translatable="false">1. Swipe from left to right or press button.</string>
+    <string name="help_ui_2" translatable="false">2. Select item in main navigation panel.</string>
 
-    <string name="help_cam">Camera Help</string>
-    <string name="help_cam_1"></string>
-    <string name="help_cam_2"></string>
+    <string name="help_cam" translatable="false">Camera Help</string>
+    <string name="help_cam_1" translatable="false"></string>
+    <string name="help_cam_2" translatable="false"></string>
 
-    <string name="help_ls">Locale Storage Help</string>
-    <string name="help_ls_1"></string>
-    <string name="help_ls_2"></string>
+    <string name="help_ls" translatable="false">Locale Storage Help</string>
+    <string name="help_ls_1" translatable="false"></string>
+    <string name="help_ls_2" translatable="false"></string>
 
 
 

@@ -3,28 +3,46 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
-        defaultConfig {
-            applicationId "com.example.grk_rise.rainbow"
+    defaultConfig {
+        applicationId "com.example.grk_rise.rainbow"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "0.0." + "cebbd76e05d94de705266a952f31f23493e67469"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+        debug {
+            debuggable true
+        }
+    }
+    productFlavors {
+        freeVers {
             minSdkVersion 19
-            targetSdkVersion 21
+            applicationId 'com.example.grk_rise.rainbow.free'
+            targetSdkVersion 22
             versionCode 1
-            versionName "0.0." + "a5970bf927f541cdd70c626ec8e7f58f32d32eda"
         }
-        buildTypes {
-            release {
-                minifyEnabled false
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            }
+        payVers {
+            minSdkVersion 19
+            applicationId 'com.example.grk_rise.rainbow.pay'
+            targetSdkVersion 22
+            versionCode 1
         }
     }
-
-    dependencies {
-        compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile "com.android.support:appcompat-v7:21.0.+"
-
-
+    dexOptions {
+        incremental true
     }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.0.+'
+}
 
 
 

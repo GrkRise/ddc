@@ -4,9 +4,11 @@
     <string name="about_support">О приложении и поддержка</string>
     <string name="camera">Камера</string>
     <string name="help">Помощь</string>
-    <string name="home">Домашний экран</string>
+    <string name="home">Домашний экран!</string>
     <string name="ls">Локальное хранилище</string>
     <string name="result">Результат</string>
     <string name="settings">Настройки</string>
     <string name="name">#rainbow меню</string>
+    <string name="navigation_drawer_close">Закрыть </string>
+    <string name="navigation_drawer_open">Открыть</string>
 </resources>
