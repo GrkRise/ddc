@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.grk_rise.rainbow.activitys.HomeActivity$PlaceholderFragment"
+    tools:context="com.grk_rise.rainbow.activitys.HomeActivity$PlaceholderFragment"
     android:background="@color/background"
     android:orientation="vertical"
     android:weightSum="1">
@@ -71,15 +71,7 @@
             <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/help_ls"
-            android:textColor="@color/back_text"
-            android:textSize="@dimen/help_title"
-            android:id="@+id/head_ls"/>
-
-            <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/help_ls_1"
+            android:text="@string/help_cam_3"
             android:paddingLeft="@dimen/stand_padding"
             android:textSize="@dimen/stand_text"
             android:textColor="@color/help_text"/>
@@ -87,10 +79,42 @@
             <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/help_ls_2"
+            android:text="@string/help_cam_4"
             android:paddingLeft="@dimen/stand_padding"
             android:textSize="@dimen/stand_text"
             android:textColor="@color/help_text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_ls"
+                android:textColor="@color/back_text"
+                android:textSize="@dimen/help_title"
+                android:id="@+id/head_ls"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cs"
+                android:paddingLeft="@dimen/stand_padding"
+                android:textSize="@dimen/stand_text"
+                android:textColor="@color/help_text"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_set"
+                android:textColor="@color/back_text"
+                android:textSize="@dimen/help_title"
+                android:id="@+id/head_set"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cs"
+                android:paddingLeft="@dimen/stand_padding"
+                android:textSize="@dimen/stand_text"
+                android:textColor="@color/help_text"/>
 
         </LinearLayout>
 

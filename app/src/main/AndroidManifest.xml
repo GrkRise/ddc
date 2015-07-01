@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.grk_rise.rainbow" >
+    package="com.grk_rise.rainbow">
     <uses-sdk android:minSdkVersion="11"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_logo_project_light"
         android:label="@string/app_name"
-        android:theme="@style/FullscreenTheme">
+        android:theme="@style/FullscreenTheme"
+        >
         <activity
-            android:name="com.example.grk_rise.rainbow.activitys.SplashActivity"
+            android:name="com.grk_rise.rainbow.activitys.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             >
@@ -20,13 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.grk_rise.rainbow.activitys.HomeActivity"
+            android:name="com.grk_rise.rainbow.activitys.HomeActivity"
             android:label="@string/home"
             android:theme="@style/actionBar">
         </activity>
         <provider
             android:authorities="com.example.grk_rise.rainbow"
-            android:name="com.example.grk_rise.rainbow.activitys.FileContentProvider"
+            android:name=".core.FileContentProvider"
             android:enabled="true"
             android:exported="true"/>
 

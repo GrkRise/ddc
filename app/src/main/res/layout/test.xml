@@ -1,0 +1,48 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <TableRow android:layout_height="fill_parent" android:layout_width="fill_parent">
+        <TextView android:layout_width="wrap_content" android:layout_height="fill_parent"
+            android:text="Start Activity" android:textColor="@color/orange" android:textSize="26sp"
+            android:textStyle="bold" android:layout_span="2" android:paddingTop="12dp"/>
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_column="0" android:text="Login:" android:textColor="@color/pink"
+            android:layout_gravity="center" android:textSize="20sp"/>
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:inputType="text" android:ems="10" android:layout_gravity="center"
+            android:backgroundTint="@color/pink" android:textColor="@color/pink"
+            android:layout_column="1" android:layout_margin="5dp"/>
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_column="0" android:text="Password:" android:textColor="@color/purple"
+            android:layout_gravity="center"/>
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:inputType="textPassword" android:ems="10" android:layout_gravity="center"
+            android:backgroundTint="@color/purple" android:layout_column="1"
+            android:layout_margin="5dp"/>
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold" android:text="Your number:" android:layout_span="2"
+            android:textColor="@color/green" android:layout_gravity="center"
+            android:layout_column="0"/>
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:inputType="phone" android:text="+791977706**"
+            android:textColor="@color/green" android:layout_gravity="center"
+            android:backgroundTint="@color/green" android:layout_span="2"
+            android:ems="6" android:layout_column="0" android:layout_margin="5dp"/>
+    </TableRow>
+    <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    </TableRow>
+
+</TableLayout>
+

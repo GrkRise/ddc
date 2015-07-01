@@ -4,16 +4,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.grk_rise.rainbow.activitys.HomeActivity$PlaceholderFragment"
+    tools:context="com.grk_rise.rainbow.activitys.HomeActivity$PlaceholderFragment"
     android:background="@color/background">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ls"
+        android:text="@string/cs"
         android:layout_centerInParent="true"
         android:gravity="center"
         android:textColor="@color/back_text"
         android:textSize="@dimen/logo_text"
         />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:padding="3dp"
+        android:background="#000000"
+        android:adjustViewBounds="true"
+        android:id="@+id/loc_store"
+        android:visibility="invisible"/>
 
 </RelativeLayout>
