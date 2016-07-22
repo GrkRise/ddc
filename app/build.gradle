@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'GrkRise'
+            keyPassword 'qwe7770683asd'
+            storeFile file('C:/Users/GrK_Rise/AndroidStudioProjects/rainbow.jks')
+            storePassword 'qwe7770683asd'
+        }
+    }
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+    defaultConfig {
+        applicationId "com.grk_rise.rainbow"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "0.0." + "9 beta"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+        }
+        debug {
+            debuggable true
+        }
+    }
+//    productFlavors {
+//        freeVers {
+//            minSdkVersion 19
+//            applicationId 'com.example.grk_rise.rainbow.freeVers'
+//            targetSdkVersion 22
+//            versionCode 1
+//        }
+//        payVers {
+//            minSdkVersion 19
+//            applicationId 'com.example.grk_rise.rainbow'
+//            targetSdkVersion 22
+//            versionCode 1
+//        }
+//    }
+//    dexOptions {
+//        incremental true
+//    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:palette-v7:22.1.1'
+    compile 'com.android.support:cardview-v7:22.1.1'
+    compile 'com.android.support:recyclerview-v7:22.1.1'
+    compile 'com.google.android.gms:play-services:7.3.0'
+}
+
+
+
